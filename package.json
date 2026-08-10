@@ -1,7 +1,7 @@
 {
   "name": "vitepress-plugin-cloudflare-ai-search",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@11.21.0",
   "description": "Replace VitePress default-theme search with Cloudflare AI Search",
   "author": "Estéban Soubiran <esteban@soubiran.dev>",
