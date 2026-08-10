@@ -3,7 +3,7 @@ import type { CloudflareAISearchOptions } from './options.js'
 import { fileURLToPath } from 'node:url'
 import { normalizeOptions, serializeOptions } from './options.js'
 
-const virtualModuleId = 'virtual:vitepress-cloudflare-ai-search/options'
+const virtualModuleId = 'virtual:vitepress-plugin-cloudflare-ai-search/options'
 const resolvedVirtualModuleId = `\0${virtualModuleId}`
 
 /**
@@ -17,7 +17,7 @@ export function cloudflareAISearch(options: CloudflareAISearchOptions): Plugin {
   )
 
   return {
-    name: 'vitepress-cloudflare-ai-search',
+    name: 'vitepress-plugin-cloudflare-ai-search',
     enforce: 'pre',
 
     config() {
@@ -42,7 +42,7 @@ export function cloudflareAISearch(options: CloudflareAISearchOptions): Plugin {
         || hasEnabledDefine(config, '__ALGOLIA__')
       ) {
         config.logger.warn(
-          '[vitepress-cloudflare-ai-search] `themeConfig.search` is also configured. The VitePress local or Algolia search UI is replaced by Cloudflare AI Search, so its provider configuration is unused.',
+          '[vitepress-plugin-cloudflare-ai-search] `themeConfig.search` is also configured. The VitePress local or Algolia search UI is replaced by Cloudflare AI Search, so its provider configuration is unused.',
         )
       }
     },

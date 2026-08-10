@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Translations } from '@cloudflare/ai-search-snippet'
-import options from 'virtual:vitepress-cloudflare-ai-search/options'
+import options from 'virtual:vitepress-plugin-cloudflare-ai-search/options'
 import { useData } from 'vitepress'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import './style.css'
@@ -11,7 +11,7 @@ type SearchModalElement = HTMLElement & {
   close: () => void
 }
 
-const modalId = 'vitepress-cloudflare-ai-search-modal'
+const modalId = 'vitepress-plugin-cloudflare-ai-search-modal'
 const { isDark } = useData()
 const button = ref<HTMLButtonElement>()
 const modalHost = ref<HTMLDivElement>()
@@ -109,7 +109,7 @@ async function loadModal() {
     await import('@cloudflare/ai-search-snippet/search')
   }
   catch (error) {
-    console.error('[vitepress-cloudflare-ai-search] failed to load Cloudflare AI Search.', error)
+    console.error('[vitepress-plugin-cloudflare-ai-search] failed to load Cloudflare AI Search.', error)
     openWhenReady = false
     isOpen.value = false
     loadError.value = true
@@ -165,7 +165,7 @@ onBeforeUnmount(() => {
       :aria-keyshortcuts="ariaKeyshortcuts"
       :aria-expanded="isOpen"
       :aria-controls="modalId"
-      :aria-describedby="loadError ? 'vitepress-cloudflare-ai-search-error' : undefined"
+      :aria-describedby="loadError ? 'vitepress-plugin-cloudflare-ai-search-error' : undefined"
       :title="loadError ? 'Search is unavailable. Activate to retry.' : undefined"
       @click="openModal"
     >
@@ -179,7 +179,7 @@ onBeforeUnmount(() => {
     </button>
     <span
       v-if="loadError"
-      id="vitepress-cloudflare-ai-search-error"
+      id="vitepress-plugin-cloudflare-ai-search-error"
       class="VPNavBarSearchError"
       role="status"
     >

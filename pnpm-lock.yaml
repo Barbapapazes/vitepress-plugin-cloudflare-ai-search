@@ -63,7 +63,7 @@ importers:
       vitepress:
         specifier: next
         version: 2.0.0-alpha.19(@types/node@24.13.3)(change-case@5.4.4)(jiti@2.7.0)(postcss@8.5.26)(typescript@6.0.3)(yaml@2.9.0)
-      vitepress-cloudflare-ai-search:
+      vitepress-plugin-cloudflare-ai-search:
         specifier: workspace:*
         version: link:..
 

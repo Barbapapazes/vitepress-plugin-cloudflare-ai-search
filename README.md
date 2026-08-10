@@ -1,9 +1,9 @@
-# vitepress-cloudflare-ai-search
+# vitepress-plugin-cloudflare-ai-search
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
-[![pkg.pr.new](https://pkg.pr.new/badge/Barbapapazes/vitepress-cloudflare-ai-search)](https://pkg.pr.new/~/Barbapapazes/vitepress-cloudflare-ai-search)
+[![pkg.pr.new](https://pkg.pr.new/badge/Barbapapazes/vitepress-plugin-cloudflare-ai-search)](https://pkg.pr.new/~/Barbapapazes/vitepress-plugin-cloudflare-ai-search)
 
 Replace the VitePress default-theme search with [Cloudflare AI Search](https://developers.cloudflare.com/ai-search/).
 
@@ -16,7 +16,7 @@ Replace the VitePress default-theme search with [Cloudflare AI Search](https://d
 ## Installation
 
 ```bash
-pnpm add vitepress-cloudflare-ai-search
+pnpm add vitepress-plugin-cloudflare-ai-search
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Add the plugin to the VitePress `vite.plugins` array:
 ```ts
 // .vitepress/config.ts
 import { defineConfig } from 'vitepress'
-import { cloudflareAISearch } from 'vitepress-cloudflare-ai-search'
+import { cloudflareAISearch } from 'vitepress-plugin-cloudflare-ai-search'
 
 export default defineConfig({
   vite: {
@@ -98,11 +98,11 @@ Review your plan's rate limits, query quotas, indexing delay, analytics behavior
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/vitepress-cloudflare-ai-search/latest.svg?style=flat&colorA=000&colorB=171717
-[npm-version-href]: https://npmjs.com/package/vitepress-cloudflare-ai-search
+[npm-version-src]: https://img.shields.io/npm/v/vitepress-plugin-cloudflare-ai-search/latest.svg?style=flat&colorA=000&colorB=171717
+[npm-version-href]: https://npmjs.com/package/vitepress-plugin-cloudflare-ai-search
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/vitepress-cloudflare-ai-search.svg?style=flat&colorA=000&colorB=171717
-[npm-downloads-href]: https://npmjs.com/package/vitepress-cloudflare-ai-search
+[npm-downloads-src]: https://img.shields.io/npm/dm/vitepress-plugin-cloudflare-ai-search.svg?style=flat&colorA=000&colorB=171717
+[npm-downloads-href]: https://npmjs.com/package/vitepress-plugin-cloudflare-ai-search
 
-[license-src]: https://img.shields.io/npm/l/vitepress-cloudflare-ai-search.svg?style=flat&colorA=000&colorB=171717
-[license-href]: https://npmjs.com/package/vitepress-cloudflare-ai-search
+[license-src]: https://img.shields.io/npm/l/vitepress-plugin-cloudflare-ai-search.svg?style=flat&colorA=000&colorB=171717
+[license-href]: https://npmjs.com/package/vitepress-plugin-cloudflare-ai-search

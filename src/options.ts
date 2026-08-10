@@ -52,7 +52,7 @@ export function normalizeOptions(
 ): NormalizedCloudflareAISearchOptions {
   if (!options || typeof options !== 'object') {
     throw new TypeError(
-      '[vitepress-cloudflare-ai-search] options must be an object.',
+      '[vitepress-plugin-cloudflare-ai-search] options must be an object.',
     )
   }
 
@@ -90,7 +90,7 @@ export function serializeOptions(
   catch (error) {
     const reason = error instanceof Error ? error.message : String(error)
     throw new TypeError(
-      `[vitepress-cloudflare-ai-search] options must be JSON serializable: ${reason}`,
+      `[vitepress-plugin-cloudflare-ai-search] options must be JSON serializable: ${reason}`,
       { cause: error },
     )
   }
@@ -99,7 +99,7 @@ export function serializeOptions(
 function normalizeEndpoint(value: string): string {
   if (typeof value !== 'string' || value.trim() === '') {
     throw new TypeError(
-      '[vitepress-cloudflare-ai-search] `endpoint` must be a non-empty URL.',
+      '[vitepress-plugin-cloudflare-ai-search] `endpoint` must be a non-empty URL.',
     )
   }
 
@@ -111,26 +111,26 @@ function normalizeEndpoint(value: string): string {
   }
   catch {
     throw new TypeError(
-      `[vitepress-cloudflare-ai-search] invalid endpoint URL: ${input}`,
+      `[vitepress-plugin-cloudflare-ai-search] invalid endpoint URL: ${input}`,
     )
   }
 
   if (url.protocol !== 'http:' && url.protocol !== 'https:') {
     throw new TypeError(
-      '[vitepress-cloudflare-ai-search] `endpoint` must use http or https.',
+      '[vitepress-plugin-cloudflare-ai-search] `endpoint` must use http or https.',
     )
   }
 
   if (url.username || url.password || url.search || url.hash) {
     throw new TypeError(
-      '[vitepress-cloudflare-ai-search] `endpoint` must be a public endpoint root without credentials, query parameters, or a hash.',
+      '[vitepress-plugin-cloudflare-ai-search] `endpoint` must be a public endpoint root without credentials, query parameters, or a hash.',
     )
   }
 
   const path = url.pathname.replace(/\/+$/, '')
   if (path === '/search') {
     throw new TypeError(
-      '[vitepress-cloudflare-ai-search] `endpoint` must be the endpoint root, not the `/search` URL.',
+      '[vitepress-plugin-cloudflare-ai-search] `endpoint` must be the endpoint root, not the `/search` URL.',
     )
   }
 
@@ -146,20 +146,20 @@ function validateCssVariables(
 
   if (!variables || typeof variables !== 'object' || Array.isArray(variables)) {
     throw new TypeError(
-      '[vitepress-cloudflare-ai-search] `cssVariables` must be an object.',
+      '[vitepress-plugin-cloudflare-ai-search] `cssVariables` must be an object.',
     )
   }
 
   for (const [name, value] of Object.entries(variables)) {
     if (!name.startsWith('--search-snippet-')) {
       throw new TypeError(
-        `[vitepress-cloudflare-ai-search] invalid CSS variable '${name}'; names must start with '--search-snippet-'.`,
+        `[vitepress-plugin-cloudflare-ai-search] invalid CSS variable '${name}'; names must start with '--search-snippet-'.`,
       )
     }
 
     if (typeof value !== 'string') {
       throw new TypeError(
-        `[vitepress-cloudflare-ai-search] CSS variable '${name}' must have a string value.`,
+        `[vitepress-plugin-cloudflare-ai-search] CSS variable '${name}' must have a string value.`,
       )
     }
   }

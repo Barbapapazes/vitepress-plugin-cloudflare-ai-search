@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'node:url'
 import { loadEnv } from 'vite'
 import { defineConfig } from 'vitepress'
-import { cloudflareAISearch } from 'vitepress-cloudflare-ai-search'
+import { cloudflareAISearch } from 'vitepress-plugin-cloudflare-ai-search'
 
 const playgroundRoot = fileURLToPath(new URL('..', import.meta.url))
 const env = loadEnv('development', playgroundRoot, '')

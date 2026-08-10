@@ -1,5 +1,5 @@
 {
-  "name": "vitepress-cloudflare-ai-search",
+  "name": "vitepress-plugin-cloudflare-ai-search",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@11.21.0",
@@ -7,12 +7,12 @@
   "author": "Estéban Soubiran <esteban@soubiran.dev>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/Barbapapazes",
-  "homepage": "https://github.com/Barbapapazes/vitepress-cloudflare-ai-search#readme",
+  "homepage": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Barbapapazes/vitepress-cloudflare-ai-search#readme"
+    "url": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search#readme"
   },
-  "bugs": "https://github.com/Barbapapazes/vitepress-cloudflare-ai-search#readme/issues",
+  "bugs": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search#readme/issues",
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
