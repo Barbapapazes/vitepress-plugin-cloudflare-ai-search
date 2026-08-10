@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "vitepress-plugin-cloudflare-ai-search",
+  "compatibility_date": "2026-08-10",
+  "routes": [
+    {
+      "pattern": "vitepress-plugin-cloudflare-ai-search.barbapapazes.dev",
+      "zone_name": "barbapapazes.dev",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "CLOUDFLARE_AI_SEARCH_ENDPOINT": "https://search.vitepress-plugin-cloudflare-ai-search.barbapapazes.dev"
+  },
+  "assets": {
+    "directory": ".vitepress/dist"
+  },
+  "preview_urls": false,
+  "workers_dev": false
+}
