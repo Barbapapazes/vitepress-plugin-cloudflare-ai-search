@@ -1,0 +1,46 @@
+{
+  "name": "vitepress-cloudflare-ai-search",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@11.21.0",
+  "description": "",
+  "author": "Estéban Soubiran <esteban@soubiran.dev>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/Barbapapazes",
+  "homepage": "https://github.com/Barbapapazes/vitepress-cloudflare-ai-search#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Barbapapazes/vitepress-cloudflare-ai-search#readme"
+  },
+  "bugs": "https://github.com/Barbapapazes/vitepress-cloudflare-ai-search#readme/issues",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "build": "tsdown",
+    "prepack": "pnpm run build",
+    "release": "bumpp --sign"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.3.0",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/node": "^24.13.3",
+    "eslint": "^10.8.1",
+    "taze": "^20.0.0",
+    "tsdown": "^0.22.14",
+    "typescript": "~6.0.3"
+  }
+}
