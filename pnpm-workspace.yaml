@@ -5,3 +5,7 @@ trustPolicy: no-downgrade
 packages:
   - .
   - .playground
+
+allowBuilds:
+  esbuild: false
+  workerd: false
