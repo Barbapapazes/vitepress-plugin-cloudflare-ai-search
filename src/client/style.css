@@ -1,0 +1,120 @@
+.VPNavBarSearch {
+  display: flex;
+  align-items: center;
+}
+
+.VPNavBarSearchButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--vp-nav-height);
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.VPNavBarSearchButton:hover {
+  background-color: var(--vp-c-bg-alt);
+}
+
+.VPNavBarSearchButton:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+.VPNavBarSearchError {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.text,
+.keys,
+:root.mac .key-ctrl,
+:root:not(.mac) .key-cmd {
+  display: none;
+}
+
+kbd {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.VPNavBarSearchModal {
+  display: block;
+}
+
+search-modal-snippet {
+  display: block;
+}
+
+/*
+ * @cloudflare/ai-search-snippet 0.0.43 only applies its dark palette inside
+ * `prefers-color-scheme: dark`, so `theme="dark"` remains light on systems
+ * using a light color scheme. Map its public CSS variables to VitePress when
+ * the component is explicitly dark. Inline `cssVariables` still take priority.
+ */
+search-modal-snippet[theme='dark'] {
+  --search-snippet-primary-color: var(--vp-c-brand-1);
+  --search-snippet-primary-hover: var(--vp-c-brand-2);
+  --search-snippet-background: var(--vp-c-bg);
+  --search-snippet-surface: var(--vp-c-bg-soft);
+  --search-snippet-text-color: var(--vp-c-text-1);
+  --search-snippet-text-secondary: var(--vp-c-text-2);
+  --search-snippet-text-description: var(--vp-c-text-2);
+  --search-snippet-border-color: var(--vp-c-divider);
+  --search-snippet-hover-background: var(--vp-c-bg-alt);
+  --search-snippet-focus-ring: var(--vp-c-brand-1);
+  --search-snippet-assistant-message-bg: var(--vp-c-bg-soft);
+  --search-snippet-assistant-message-text: var(--vp-c-text-1);
+}
+
+@media (min-width: 768px) {
+  .VPNavBarSearch {
+    flex-grow: 1;
+    gap: 8px;
+    padding-left: 24px;
+  }
+
+  .VPNavBarSearchButton {
+    height: auto;
+    padding: 8px 12px;
+    background-color: var(--vp-c-bg-alt);
+    color: var(--vp-c-text-2);
+    font-size: 14px;
+  }
+
+  .VPNavBarSearchButton:hover {
+    background-color: var(--vp-c-bg-soft);
+  }
+
+  .text {
+    display: inline;
+    font-size: 13px;
+  }
+
+  .keys {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 6px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 4px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPNavBarSearch {
+    padding-left: 32px;
+  }
+}

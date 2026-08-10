@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@11.21.0",
-  "description": "",
+  "description": "Replace VitePress default-theme search with Cloudflare AI Search",
   "author": "Estéban Soubiran <esteban@soubiran.dev>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/Barbapapazes",
@@ -25,22 +25,39 @@
     "dist"
   ],
   "engines": {
-    "node": ">=24"
+    "node": "24"
   },
   "scripts": {
     "lint": "eslint",
     "lint:fix": "eslint --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
     "build": "tsdown",
     "prepack": "pnpm run build",
     "release": "bumpp --sign"
+  },
+  "peerDependencies": {
+    "vite": ">=5.0.0",
+    "vitepress": "^1.6.4 || ^2.0.0-0",
+    "vue": "^3.2.25"
+  },
+  "dependencies": {
+    "@cloudflare/ai-search-snippet": "^0.0.43"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.13.3",
+    "bumpp": "^12.2.0",
+    "changelogithub": "^15.0.4",
     "eslint": "^10.8.1",
     "taze": "^20.0.0",
     "tsdown": "^0.22.14",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "vite": "^8.2.1",
+    "vitepress": "2.0.0-alpha.19",
+    "vitest": "^4.1.10",
+    "vue": "^3.5.41",
+    "vue-tsc": "^3.3.9"
   }
 }

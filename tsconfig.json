@@ -1,11 +1,16 @@
 {
   "extends": "@tsconfig/node24",
   "compilerOptions": {
+    "lib": [
+      "ES2024",
+      "DOM"
+    ],
     "types": [
       "node"
     ]
   },
   "include": [
-    "src"
+    "src",
+    "test"
   ]
 }

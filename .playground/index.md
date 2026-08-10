@@ -13,3 +13,9 @@ hero:
       text: API examples
       link: /api-examples
 ---
+
+## Cloudflare AI Search
+
+The navbar search is wired to the local `vitepress-cloudflare-ai-search` package.
+
+Set `CLOUDFLARE_AI_SEARCH_ENDPOINT` in `.env` to a public Cloudflare AI Search endpoint root to search real content. The placeholder endpoint lets the playground build before an instance is configured.
