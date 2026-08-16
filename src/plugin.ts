@@ -22,9 +22,6 @@ export function cloudflareAISearch(options: CloudflareAISearchOptions): Plugin {
 
     config() {
       return {
-        optimizeDeps: {
-          include: ['@cloudflare/ai-search-snippet/search'],
-        },
         resolve: {
           alias: [
             {

@@ -4,13 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@cloudflare/ai-search-snippet': 2563086258caf3b1222a2d9a99a87221b06bf144274a27ae6ef3d2fb3602f2f8
+
 importers:
 
   .:
     dependencies:
       '@cloudflare/ai-search-snippet':
         specifier: ^0.0.43
-        version: 0.0.43
+        version: 0.0.43(patch_hash=2563086258caf3b1222a2d9a99a87221b06bf144274a27ae6ef3d2fb3602f2f8)
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^9.3.0
@@ -3112,7 +3115,7 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@cloudflare/ai-search-snippet@0.0.43': {}
+  '@cloudflare/ai-search-snippet@0.0.43(patch_hash=2563086258caf3b1222a2d9a99a87221b06bf144274a27ae6ef3d2fb3602f2f8)': {}
 
   '@cloudflare/kv-asset-handler@0.5.0': {}
 

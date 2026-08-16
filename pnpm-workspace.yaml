@@ -9,3 +9,6 @@ packages:
 allowBuilds:
   esbuild: false
   workerd: false
+
+patchedDependencies:
+  '@cloudflare/ai-search-snippet': patches/@cloudflare__ai-search-snippet.patch

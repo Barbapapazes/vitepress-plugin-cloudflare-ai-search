@@ -106,7 +106,7 @@ async function loadModal() {
   loadError.value = false
 
   try {
-    await import('@cloudflare/ai-search-snippet/search')
+    await import('./snippet.mjs')
   }
   catch (error) {
     console.error('[vitepress-plugin-cloudflare-ai-search] failed to load Cloudflare AI Search.', error)
