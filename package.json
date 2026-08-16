@@ -42,7 +42,7 @@
     "vue": "^3.2.25"
   },
   "dependencies": {
-    "@cloudflare/ai-search-snippet": "^0.0.43"
+    "@cloudflare/ai-search-snippet": "0.0.43"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
