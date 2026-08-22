@@ -1,3 +1,5 @@
+minimumReleaseAgeExclude:
+  - cloudflare-ai-search-sync@0.1.2
 shellEmulator: true
 
 trustPolicy: off
@@ -12,6 +14,3 @@ allowBuilds:
 
 patchedDependencies:
   '@cloudflare/ai-search-snippet': patches/@cloudflare__ai-search-snippet.patch
-
-minimumReleaseAgeExclude:
-  - cloudflare-ai-search-sync@0.1.2

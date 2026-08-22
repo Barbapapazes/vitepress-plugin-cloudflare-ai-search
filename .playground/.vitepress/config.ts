@@ -1,6 +1,6 @@
+import { cloudflareAISearchSync } from 'cloudflare-ai-search-sync/vitepress'
 import { defineConfig } from 'vitepress'
 import { cloudflareAISearch } from 'vitepress-plugin-cloudflare-ai-search'
-import { cloudflareAISearchSync } from 'cloudflare-ai-search-sync/vitepress'
 
 export default defineConfig({
   title: 'VitePress Playground',
