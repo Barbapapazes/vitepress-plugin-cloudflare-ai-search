@@ -1,6 +1,6 @@
 shellEmulator: true
 
-trustPolicy: no-downgrade
+trustPolicy: off
 
 packages:
   - .
@@ -12,3 +12,6 @@ allowBuilds:
 
 patchedDependencies:
   '@cloudflare/ai-search-snippet': patches/@cloudflare__ai-search-snippet.patch
+
+minimumReleaseAgeExclude:
+  - cloudflare-ai-search-sync@0.1.2
