@@ -5,13 +5,12 @@
 [![License][license-src]][license-href]
 [![pkg.pr.new](https://pkg.pr.new/badge/Barbapapazes/vitepress-plugin-cloudflare-ai-search)](https://pkg.pr.new/~/Barbapapazes/vitepress-plugin-cloudflare-ai-search)
 
-Replace the VitePress default-theme search with [Cloudflare AI Search](https://developers.cloudflare.com/ai-search/).
+Replace the VitePress default-theme search with [Cloudflare AI Search](https://developers.cloudflare.com/ai-search/). Read [Bringing Cloudflare AI Search to Docus and VitePress](https://soubiran.dev/posts/bringing-cloudflare-ai-search-to-docus-and-vitepress) for the story behind the package family.
 
-- 🔎 **Native VitePress integration**: Replaces the default navbar search surface without changing your theme.
-- ☁️ **Cloudflare-powered search**: Uses Cloudflare's official `search-modal-snippet` component for search, results, favorites, and analytics.
-- ⌨️ **Keyboard ready**: Opens with Cloudflare's built-in `Cmd/Ctrl+K` shortcut.
-- 🌗 **Theme aware**: Follows VitePress light and dark mode unless you choose a theme explicitly.
-- 🖥️ **SSR safe**: Loads Cloudflare's browser-only component after mount.
+- Replaces the default navbar search without changing your theme.
+- Uses Cloudflare's official `search-modal-snippet` component.
+- Supports Cloudflare's built-in keyboard shortcut, favorites, and analytics.
+- Follows VitePress light and dark mode unless you choose a theme.
 
 ## Installation
 
@@ -42,11 +41,7 @@ export default defineConfig({
 > [!NOTE]
 > Do not configure `themeConfig.search`. This plugin replaces VitePress's local or Algolia search UI.
 
-The required `endpoint` is the public AI Search endpoint root. It must use `http` or `https` and must not include credentials, query parameters, a hash, or the `/search` path. Redundant trailing slashes are removed automatically.
-
 ## Options
-
-All Cloudflare modal settings are optional and use Cloudflare's defaults when omitted.
 
 ```ts
 cloudflareAISearch({
@@ -68,7 +63,7 @@ cloudflareAISearch({
 | `theme` | `light`, `dark`, or `auto`. Omit it to synchronize with VitePress. |
 | `hideBranding`, `showUrl`, `showDate`, `hideThumbnails`, `groupBy`, `seeMore` | Cloudflare search result presentation. |
 | `shortcut`, `useMetaKey` | Keyboard shortcut customization. Defaults to `k` and `true`. |
-| `requestOptions` | Additional **public** request fields, headers, and query parameters. |
+| `requestOptions` | Additional public request fields, headers, and query parameters. |
 | `disableAnalytics` | Disables Cloudflare analytics. Analytics are enabled by default. |
 | `translations` | Cloudflare modal translations. `searchButtonLabel` also controls the navbar label. |
 | `cssVariables` | `--search-snippet-*` properties forwarded to the component host for Shadow DOM styling. |
@@ -76,13 +71,18 @@ cloudflareAISearch({
 The navbar label uses `translations.searchButtonLabel`, then `placeholder`, then `Search`.
 
 > [!WARNING]
-> The endpoint and every option are sent to the browser. AI Search endpoints are public browser endpoints, so never add API tokens, `Authorization` values, Cloudflare Access service-token secrets, or other credentials to `requestOptions`.
+> The endpoint and every option are sent to the browser. Never add API tokens, `Authorization` values, Cloudflare Access service-token secrets, or other credentials to `requestOptions`.
 
 ## Cloudflare setup
 
-Create and configure an AI Search instance in Cloudflare, enable its public `/search` endpoint, and add your development and production origins to its authorized hosts. Index only content that is safe to expose publicly.
+Create an AI Search instance, enable its public `/search` endpoint, and add your development and production origins to its authorized hosts. Index only content that is safe to expose publicly.
 
-Review your plan's rate limits, query quotas, indexing delay, analytics behavior, and Access limitations. If you configure content selectors, verify that they match your rendered VitePress main-content selector.
+Use [cloudflare-ai-search-sync](https://github.com/Barbapapazes/cloudflare-ai-search-sync) to index VitePress pages during builds.
+
+## Related packages
+
+- [cloudflare-ai-search-sync](https://github.com/Barbapapazes/cloudflare-ai-search-sync) synchronizes VitePress, Nuxt Content, and Markdown with Cloudflare AI Search.
+- [docus-cloudflare-ai-search](https://github.com/Barbapapazes/docus-cloudflare-ai-search) provides the equivalent search UI for Docus.
 
 ## Sponsors
 

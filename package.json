@@ -10,9 +10,20 @@
   "homepage": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search#readme"
+    "url": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search.git"
   },
-  "bugs": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search#readme/issues",
+  "bugs": "https://github.com/Barbapapazes/vitepress-plugin-cloudflare-ai-search/issues",
+  "keywords": [
+    "cloudflare",
+    "cloudflare-ai-search",
+    "search",
+    "vite",
+    "vitepress",
+    "vitepress-plugin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
@@ -25,7 +36,7 @@
     "dist"
   ],
   "engines": {
-    "node": "24"
+    "node": ">=24"
   },
   "scripts": {
     "lint": "eslint",
@@ -38,7 +49,7 @@
   },
   "peerDependencies": {
     "vite": ">=5.0.0",
-    "vitepress": "^1.6.4 || ^2.0.0-0",
+    "vitepress": "^2.0.0-0",
     "vue": "^3.2.25"
   },
   "dependencies": {
