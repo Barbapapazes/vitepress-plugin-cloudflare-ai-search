@@ -2,7 +2,7 @@
   "name": "vitepress-plugin-cloudflare-ai-search",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@11.21.0",
+  "packageManager": "pnpm@12.12.1",
   "description": "Replace VitePress default-theme search with Cloudflare AI Search",
   "author": "Estéban Soubiran <esteban@soubiran.dev>",
   "license": "MIT",
@@ -48,7 +48,7 @@
     "release": "bumpp --sign"
   },
   "peerDependencies": {
-    "vite": ">=5.0.0",
+    "vite": ">=8.3.4",
     "vitepress": "^2.0.0-0",
     "vue": "^3.2.25"
   },
@@ -62,12 +62,12 @@
     "bumpp": "^12.2.0",
     "changelogithub": "^15.0.4",
     "eslint": "^10.8.1",
-    "taze": "^20.0.0",
+    "taze": "^21.3.0",
     "tsdown": "^0.22.14",
-    "typescript": "~6.0.3",
+    "typescript": "~7.0.2",
     "vite": "^8.2.1",
     "vitepress": "2.0.0-alpha.19",
-    "vitest": "^4.1.10",
+    "vitest": "^5.0.3",
     "vue": "^3.5.41",
     "vue-tsc": "^3.3.9"
   }
